@@ -51,9 +51,8 @@ sleep 2
     bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.6.5
     wget -O /etc/xray/config.json "https://github.com/axcellsz/xraysc/raw/main/file/config.json"
     rm -rf /etc/systemd/system/xray.service.d
-    cat >/etc/systemd/system/xray.service <<EOF
-
-    cat >/root/.profile <<END
+    cat >/etc/systemd/system/xray.service
+    cat >/root/.profile
 # ~/.profile: executed by Bourne-compatible login shells.
 if [ "$BASH" ]; then
   if [ -f ~/.bashrc ]; then
